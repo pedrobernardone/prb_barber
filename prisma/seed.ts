@@ -107,7 +107,7 @@ async function seedDatabase() {
       const address = addresses[i];
       const imageUrl = images[i];
 
-      const barbershop = await prisma.barbershop.create({
+      const barbershop = await prisma.barberShop.create({
         data: {
           name,
           address,
@@ -119,7 +119,7 @@ async function seedDatabase() {
       });
 
       for (const service of services) {
-        await prisma.barbershopService.create({
+        await prisma.barberShopService.create({
           data: {
             name: service.name,
             description: service.description,
